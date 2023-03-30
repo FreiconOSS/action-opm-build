@@ -11,6 +11,7 @@ COPY --from=build /opmbuilder /opmbuilder
 RUN upx --best --lzma /opmbuilder
 
 FROM alpine:latest
+RUN apk add --no-cache bash
 COPY --from=upx /opmbuilder /opmbuilder
 COPY entrypoint.sh /entrypoint.sh
 
