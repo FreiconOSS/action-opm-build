@@ -1,0 +1,20 @@
+name: "Build opm"
+description: "creates opm file from source code"
+
+
+inputs:
+  # name and version of the package
+  version:
+    description: "version of the opm package"
+    required: true
+  name:
+    description: "name of the opm package"
+    required: true
+  sopm:
+    description: "path to the sopm file to build"
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'docker://freiconoss/action-opm-build'
+
