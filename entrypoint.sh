@@ -20,4 +20,6 @@ if [ "${INPUT_NAME}" == "" ]; then
 fi
 
 # build the opm file
-/opmbuilder build --version ${INPUT_VERSION} --output ${INPUT_NAME}-${INPUT_VERSION}.opm ${INPUT_SOPM}
+/opmbuilder build --version ${INPUT_VERSION} --output ${INPUT_NAME}-${INPUT_VERSION}.opm ${INPUT_SOPM} || exit $?
+
+chmod 644 ${INPUT_NAME}-${INPUT_VERSION}.opm
