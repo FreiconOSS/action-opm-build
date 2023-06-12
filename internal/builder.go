@@ -197,9 +197,11 @@ func listFiles(dir string) ([]string, error) {
 				return nil
 			}
 			if !strings.HasPrefix(path, "bin/") &&
-				!strings.HasPrefix(path, "Custom/") &&
-				!strings.HasPrefix(path, "Kernel/") &&
-				!strings.HasPrefix(path, "var/") {
+				!strings.HasPrefix(path, "Custom/")  &&
+				!strings.HasPrefix(path, "Kernel/")  &&
+				!strings.HasPrefix(path, "var/")     &&
+                                !strings.HasPrefix(path, "scripts/") &&
+                                !strings.HasPrefix(path, "doc/") {
 				return nil
 			}
 			l = append(l, path)
