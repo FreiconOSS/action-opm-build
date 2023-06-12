@@ -16,5 +16,5 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://freiconoss/action-opm-build:v1'
+  image: 'docker://freiconoss/action-opm-build:v1.1'
 
